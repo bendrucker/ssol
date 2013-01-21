@@ -8,7 +8,7 @@ Guide
 
 To use the library, *require* it in your application and instantiate a new *SSOL* object using your UNI. The *SSOL* class requires your credentials to be passed in the form of a hash with keys *:id* and *:password*.
 ``` ruby
-require "ssol.rb"
+require "./ssol"
 ssol = SSOL.new({:id => 'your_uni', :password => 'your_password'})
 ```
 
@@ -23,14 +23,16 @@ SSOL handles sessions in a very unusual and unpredictable way. This library is d
 Dependencies
 ------------
 
-All interaction with SSOL is handled by [Mechanize](https://github.com/sparklemotion/mechanize), an automated web interaction library for Ruby that uses [Nokogiri](https://github.com/sparklemotion/nokogiri) to parse HTML. Unlike [Selenium](http://seleniumhq.org), Mechanize is not a browser automation tool, which makes it much lighter. Run `gem install mechanize` to install. 
+All interaction with SSOL is handled by [Mechanize](https://github.com/sparklemotion/mechanize), an automated web interaction library for Ruby that uses [Nokogiri](https://github.com/sparklemotion/nokogiri) to parse HTML. Unlike [Selenium](http://seleniumhq.org), Mechanize is not a browser automation tool, which makes it much lighter. Run `gem install mechanize` to install or just use `bundle`. 
 
 
 Roadmap
 -------
 
-The original motivation for creating this library was to solve the problem of limited class availability by automating class availability checks and registering when slots opened. I didn't need that this semester, so now this has become a side project for me. 
+The original motivation for creating this library was to solve the problem of limited class availability by automating class availability checks and registering when slots opened. I didn't need that this semester, so now this has become a side project for me.
 
+- Improved code structure
+- RSpec testing
 - Write methods, especially the ability to add and drop classes
 - Read methods for:
 	- The schedule and exams page, including the ability to render a schedule to .ics
